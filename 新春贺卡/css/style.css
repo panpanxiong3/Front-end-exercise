@@ -8,7 +8,7 @@
 }
 
 /*  music */
-#music{
+.music{
     position: fixed;
     top: 3vh;
     right: 4vw;
@@ -23,7 +23,7 @@ html,body{
     height: 100%;
 }
 
-#music >img:first-of-type{
+.music >img:first-of-type{
     position: absolute;
     top: 24%;
     right: 2.5%;
@@ -31,7 +31,7 @@ html,body{
     z-index: 1;
 }
 
-#music>img:last-of-type{
+.music>img:last-of-type{
     position: absolute;
     top: 0;
     bottom: 0;
@@ -41,8 +41,9 @@ html,body{
     width: 79%;
     z-index: 0;
 }
-#music .play{
-    animation: music_dic 4s linear infinite;
+
+#music {
+    animation: music_dic 4s linear infinite paused;
 }
 @keyframes  music_dic {
     0%{
