@@ -21,6 +21,7 @@
 }
 html,body{
     height: 100%;
+    overflow: hidden;
 }
 
 .music >img:first-of-type{
@@ -43,7 +44,7 @@ html,body{
 }
 
 #music {
-    animation: music_dic 4s linear infinite paused;
+    animation: music_dic 4s linear infinite;
 }
 @keyframes  music_dic {
     0%{
@@ -67,7 +68,8 @@ html,body{
 }
 /* page1 */
 #page1{
-    display: none;
+    display: block;
+    transition: all 3s ease;
 }
 #page1 > .bg{
     background: url("../images/p1_bg.jpg") no-repeat center center;
@@ -134,7 +136,8 @@ html,body{
 }
 /* page2 */
 #page2{
-    display: block;
+    display: none;
+    transition: all .5s;
 }
 #page2 > .bg{
     background: url("../images/p2_bg.jpg") no-repeat center center;
@@ -233,6 +236,7 @@ html,body{
 /* page3 */
 #page3{
     display: none;
+    transition: all 0.5s;
 }
 #page3 > .bg{
     background: url("../images/p3_bg.jpg") no-repeat center center;
@@ -295,4 +299,18 @@ html,body{
     background: url("../images/p3_blessing.png") no-repeat center center;
     border-radius: 50%;
     background-size: 100%;
+}
+
+/*
+ 渐入效果
+*/
+
+.fadeIn{
+    opacity: 1;
+    transform: translate(0,-100%);
+}
+
+.fadeOut{
+    opacity: .3;
+    transform: translate(0,100%);
 }
