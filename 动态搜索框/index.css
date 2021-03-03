@@ -3,7 +3,7 @@ body{
     padding: 0;
     background: #e94118;
 }
-
+/*搜索框盒子*/
 .search-box{
     position: absolute;
     top: 50%;
@@ -22,6 +22,7 @@ body{
 .search-box:hover>.search-btn{
     background: white;
 }
+/*搜索框按钮*/
 .search-btn{
     color: #e84118;
     float: right;
@@ -34,6 +35,7 @@ body{
     align-items: center;
     transition: .4s;
 }
+/*搜索框文本样式*/
 .search-txt{
     border: none ;
     background: none;
