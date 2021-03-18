@@ -1,0 +1,166 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:700);
+
+h1 {
+    text-align: center;
+    font-family: Montserrat, sans-serif;
+    color: #333;
+}
+
+.accordion {
+    width: 100%;
+    max-width: 1080px;
+    height: 350px;
+    overflow: hidden;
+    margin: 50px auto;
+}
+
+.accordion ul {
+    width: 100%;
+    display: table;
+    table-layout: fixed;
+    margin: 0;
+    padding: 0;
+}
+
+.accordion ul li {
+    display: table-cell;
+    vertical-align: top;
+    position: relative;
+    width: 15%;
+    height: 350px;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all .5s ease;
+}
+
+.accordion ul li div {
+    display: block;
+    overflow: hidden;
+    width: 100%;
+}
+
+.accordion ul li div a {
+    display: block;
+    height: 350px;
+    width: 100%;
+    position: relative;
+    z-index: 3;
+    padding: 15px 30px;
+    box-sizing: border-box;
+    color: #fff;
+    text-decoration: none;
+    font-family: Open Sans, sans-serif;
+    transition: all .2s ease;
+}
+
+.accordion ul li div a * {
+    opacity: 0;
+    margin: 0;
+    width: 100%;
+    text-overflow: ellipsis;
+    position: relative;
+    z-index: 5;
+    white-space: normal;
+    overflow: hidden;
+    -webkit-transform: translateX(-20px);
+    transform: translateX(-20px);
+    -webkit-transition: all .4s ease;
+    transition: all .4s ease;
+}
+
+.accordion ul li div a h2 {
+    font-family: Montserrat, sans-serif;
+    text-overflow: clip;
+    font-size: 24px;
+    margin-bottom: 2px;
+    top: 160px;
+}
+
+.accordion ul li div a p {
+    top: 160px;
+    font-size: 13.6px;
+}
+
+.accordion ul li:nth-child(1) {
+    background-image: url('https://i-1.easyicon.net/2020/7/19/21407071-9885-4d17-8b02-6e1a8dd858cf.jpg')
+}
+.accordion ul li:nth-child(2) {
+    background-image: url('https://th.bing.com/th/id/R71cd1cc4b762bdd208dd20c4add5fce3?rik=0%2fvKjjdJjS8PpA&pid=ImgRaw')
+}
+.accordion ul li:nth-child(3) {
+    background-image: url('https://th.bing.com/th/id/R8dd9a736be086be3cf53f1cb335b5e3c?rik=8iwnqwe8tb3ugQ&riu=http%3a%2f%2f15wo.oss-cn-beijing.aliyuncs.com%2fwallpaper%2fca5%2f5cca56a1c09cf.jpg!1275x717&ehk=9NXjvYNWY%2bJskVm6BgF1z%2b6OfAtPWI38vtvShfh5v6w%3d&risl=&pid=ImgRaw')
+}
+
+.accordion ul li:nth-child(4) {
+    background-image: url('https://gss0.baidu.com/7Po3dSag_xI4khGko9WTAnF6hhy/zhidao/pic/item/29381f30e924b899ae0d5d5c6a061d950a7bf6a4.jpg');
+}
+
+.accordion ul li:nth-child(5) {
+    background-image: url('https://th.bing.com/th/id/R635f6944f4355cb131d24ac1391097fd?rik=QInxBn5NwjWGHg&riu=http%3a%2f%2f6shitu.com%2fwp-content%2fuploads%2f2020%2f05%2f492397459f20976.jpg&ehk=FoKpi5rVkgo69V%2fEjQ08w9F9IwtXycEWMjnYdFdQqAU%3d&risl=&pid=ImgRaw');
+}
+
+.accordion ul:hover li,
+.accordion ul:focus-within li {
+    width: 10%;
+}
+
+.accordion ul li:focus {
+    outline: none;
+}
+.accordion ul:hover li:hover,
+.accordion ul li:focus, .accordion ul:focus-within li:focus {
+  width: 60%;
+  background-size: 100% 100%;
+}
+
+.accordion ul:hover li:hover a,
+.accordion ul li:focus a,
+.accordion ul:focus-within li:focus a{
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.accordion ul:hover li:hover a *,
+.accordion ul li:focus a *,
+.accordion ul:focus-within li a * {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+}
+
+
+.accordion ul:hover li a *{
+    opacity: 0 !important;
+}
+
+.accordion ul:hover li:hover{
+    width: 60% !important; 
+}
+
+.accordion ul:hover li:hover a{
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.accordion ul:hover li:hover a *{
+    opacity: 1 !important;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+}
+
+
+@media screen and (max-width: 600px){
+    body{
+        margin: 0;
+    }
+    .accordion{
+        height: auto;
+    }
+
+    .accordion ul li, .accordion ul li:hover, .accordion ul:hover li, .accordion ul:hover li:hover{
+        position: relative;
+        display: table;
+        table-layout: fixed;
+        -webkit-transition: none;
+        transition: none;
+    } 
+}
