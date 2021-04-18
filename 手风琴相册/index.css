@@ -85,9 +85,11 @@ h1 {
 .accordion ul li:nth-child(1) {
     background-image: url('https://i-1.easyicon.net/2020/7/19/21407071-9885-4d17-8b02-6e1a8dd858cf.jpg')
 }
+
 .accordion ul li:nth-child(2) {
     background-image: url('https://th.bing.com/th/id/R71cd1cc4b762bdd208dd20c4add5fce3?rik=0%2fvKjjdJjS8PpA&pid=ImgRaw')
 }
+
 .accordion ul li:nth-child(3) {
     background-image: url('https://th.bing.com/th/id/R8dd9a736be086be3cf53f1cb335b5e3c?rik=8iwnqwe8tb3ugQ&riu=http%3a%2f%2f15wo.oss-cn-beijing.aliyuncs.com%2fwallpaper%2fca5%2f5cca56a1c09cf.jpg!1275x717&ehk=9NXjvYNWY%2bJskVm6BgF1z%2b6OfAtPWI38vtvShfh5v6w%3d&risl=&pid=ImgRaw')
 }
@@ -108,15 +110,17 @@ h1 {
 .accordion ul li:focus {
     outline: none;
 }
+
 .accordion ul:hover li:hover,
-.accordion ul li:focus, .accordion ul:focus-within li:focus {
-  width: 60%;
-  background-size: 100% 100%;
+.accordion ul li:focus,
+.accordion ul:focus-within li:focus {
+    width: 60%;
+    background-size: 100% 100%;
 }
 
 .accordion ul:hover li:hover a,
 .accordion ul li:focus a,
-.accordion ul:focus-within li:focus a{
+.accordion ul:focus-within li:focus a {
     background: rgba(0, 0, 0, 0.4);
 }
 
@@ -129,38 +133,42 @@ h1 {
 }
 
 
-.accordion ul:hover li a *{
+.accordion ul:hover li a * {
     opacity: 0 !important;
 }
 
-.accordion ul:hover li:hover{
-    width: 60% !important; 
+.accordion ul:hover li:hover {
+    width: 60% !important;
 }
 
-.accordion ul:hover li:hover a{
+.accordion ul:hover li:hover a {
     background: rgba(0, 0, 0, 0.4);
 }
 
-.accordion ul:hover li:hover a *{
+.accordion ul:hover li:hover a * {
     opacity: 1 !important;
     -webkit-transform: translateX(0);
     transform: translateX(0);
 }
 
 
-@media screen and (max-width: 600px){
-    body{
+@media screen and (max-width: 600px) {
+    body {
         margin: 0;
     }
-    .accordion{
+
+    .accordion {
         height: auto;
     }
 
-    .accordion ul li, .accordion ul li:hover, .accordion ul:hover li, .accordion ul:hover li:hover{
+    .accordion ul li,
+    .accordion ul li:hover,
+    .accordion ul:hover li,
+    .accordion ul:hover li:hover {
         position: relative;
         display: table;
         table-layout: fixed;
         -webkit-transition: none;
         transition: none;
-    } 
+    }
 }

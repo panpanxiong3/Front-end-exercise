@@ -1,0 +1,110 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(119 157 193);
+    width: 100%;
+    height: 100%;
+}
+
+.content-box{
+    position: relative;
+    width: 600px;
+    height: 350px;
+    top: 100px;
+    background: url("./image.jpg") center no-repeat;
+    background-size: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.part1,
+.part2,
+.part3,
+.part4{
+    position: absolute;
+    width: 600px;
+    height: 350px;
+    /* 设置阴影 */
+    filter: drop-shadow(4px 4px 12px rgba(0,0,0,.5));
+    background-size: cover;
+    opacity: .7;
+    transition: .5s;
+}
+.part1::after,
+.part2::after,
+.part3::after,
+.part4::after{
+    content: "";
+    position: absolute;
+    width: 600px;
+    height: 350px;
+    background-image: url("./image.jpg");
+    background-size: 100%;
+}
+.part1{
+    left: -350px;
+    transform: rotateZ(120deg);
+    overflow: hidden;
+}
+.part1::after{
+    transform: rotateZ(-120deg);
+}
+
+.part2{
+    left: -350px;
+    transform: rotateZ(-120deg);
+    overflow: hidden;
+}
+.part2::after{
+    transform: rotateZ(120deg);
+}
+
+.part3{
+    right: -350px;
+    transform: rotateZ(120deg);
+    overflow: hidden;
+}
+.part3::after{
+    transform: rotateZ(-120deg);
+}
+
+.part4{
+    right: -350px;
+    transform: rotateZ(-120deg);
+    overflow: hidden;
+}
+.part4::after{
+    transform: rotateZ(120deg);
+}
+
+.text{
+    opacity: 0;
+    font-size: 35px;
+    letter-spacing: 10px;
+    color: #2f3640;
+    transition: 1.5s;
+}
+
+.content-box:hover .part1{
+    left: -450px;
+}
+
+
+.content-box:hover .part2{
+    left: -430px;
+}
+
+.content-box:hover .part3{
+    right: -450px;
+}
+
+.content-box:hover .part4{
+    right: -430px;
+}
+
+.content-box:hover .text{
+    opacity: .8;
+    color: white;
+}
