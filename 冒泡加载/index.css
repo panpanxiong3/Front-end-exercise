@@ -46,6 +46,8 @@ body{
     animation: animate 5s linear infinite;
 }
 @keyframes  animate{
+    /*scale 缩放*/
+    /*transform-origin 设置旋转元素的基点位置*/
     0%{
         transform: scale(1);
         transform-origin: left;
