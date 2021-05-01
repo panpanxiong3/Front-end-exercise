@@ -42,6 +42,7 @@ body {
     cursor: default;
 
     position: relative;
+    /*var()函数可以代替元素中任何属性中的值的任何部分*/
     top: calc((6rem * var(--scale) - 6rem) / 2 * -1);
 
     transition: 15ms all ease-out;
