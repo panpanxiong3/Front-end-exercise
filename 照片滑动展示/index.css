@@ -13,7 +13,8 @@ body{
     background-color: #fff;
     height: 10000px;
 }
-/* perspective 属性定义 3D 元素距视图的距离 */
+/* perspective 属性定义 3D 元素距视图的距离 
+指定了观察者与 z=0 平面的距离，使具有三维位置变换的元素产生透视效果*/
 ul{
     position: fixed;
     top: calc(50% - 260px);
@@ -49,6 +50,8 @@ li{
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
 }
+/* backface-visibility 属性定义当元素不面向屏幕时是否可见。
+如果在旋转元素不希望看到其背面时，该属性很有用 */
 
 li>img{
     position: absolute;
