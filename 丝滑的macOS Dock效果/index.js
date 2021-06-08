@@ -1,6 +1,10 @@
 document.querySelectorAll('.dock li').forEach(li => {
+    // currentTarget 当前处理该事件的元素、文档或窗口
     li.addEventListener('click', e => {
-        e.currentTarget.classList.add('loading')
+        e.currentTarget.classList.add('loading');
+        setTimeout(()=>{
+            e.target.classList.remove('loading')
+        },5000)
     })
 
     li.addEventListener('mousemove', e => {
@@ -10,6 +14,7 @@ document.querySelectorAll('.dock li').forEach(li => {
         // abs() 方法可返回数的绝对值
         let offset = Math.abs(e.clientX - itemRect.left) / itemRect.width
 
+        // previousElementSibling  nextElementSibling 兄弟元素
         let prev = item.previousElementSibling || null
         let next = item.nextElementSibling || null
 
