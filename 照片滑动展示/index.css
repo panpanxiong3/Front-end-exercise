@@ -46,8 +46,8 @@ li{
     font-size: 24px;
     transform: rotateY(var(--ang));
     transform-style: preserve-3d;
-    /* backface-visibility: hidden;
-    -webkit-backface-visibility: hidden; */
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
 }
 
 li>img{
